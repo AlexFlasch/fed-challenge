@@ -4,6 +4,7 @@ import { modularScale } from 'polished';
 export default styled.nav`
   display: flex;
 
+  background-color: ${({ theme }) => theme.componentBg};
   border-bottom: 1px solid ${({ theme }) => theme.borderDark};
 
   a.nav-item {
@@ -17,6 +18,7 @@ export default styled.nav`
     text-transform: uppercase;
     text-decoration: none;
     color: ${({ theme }) => theme.textLight};
+    font-weight: bold;
     letter-spacing: 1px;
     line-height: 14px;
   }
