@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import brandLogo from '../../assets/brand-logo.svg';
+import brandLogo from '../../assets/svgs/brand-logo.svg';
 
 import Button from '../Button';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Card from '../Card';
+import chevron from '../../assets/svgs/chevron.svg';
 
 import StyledCarousel from './styles/StyledCarousel';
 
@@ -9,11 +9,12 @@ const Carousel = props => {
   return (
     <StyledCarousel>
       <button className="carousel-btn left">
-        <div className="chevron" />
+        <img src={chevron} alt="previous-item" />
       </button>
       <button className="carousel-btn right">
-        <div className="chevron" />
+        <img src={chevron} alt="next-item" />
       </button>
+      <div className="carousel-contents">{props.children}</div>
     </StyledCarousel>
   );
 };

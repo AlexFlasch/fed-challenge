@@ -5,7 +5,13 @@ import StyledCard from './styles/StyledCard';
 
 const Card = props => {
   return (
-    <StyledCard width={props.width} height={props.height}>
+    <StyledCard
+      width={props.width}
+      height={props.height}
+      margin={props.margin}
+      padding={props.padding}
+      {...props}
+    >
       {props.children}
     </StyledCard>
   );
@@ -14,8 +20,15 @@ const Card = props => {
 Card.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
+  margin: PropTypes.string,
+  padding: PropTypes.string,
 };
 
-Card.defaultProps = {};
+Card.defaultProps = {
+  width: 'auto',
+  height: 'auto',
+  margin: '0',
+  padding: '0',
+};
 
 export default Card;

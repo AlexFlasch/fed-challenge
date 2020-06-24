@@ -3,11 +3,19 @@ import { modularScale, transparentize } from 'polished';
 
 export default styled.div`
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+
+  min-height: ${modularScale(10)};
 
   background-color: ${({ theme }) => theme.carouselBg};
+
+  .carousel-contents {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+
+    height: ${modularScale(10)};
+  }
 
   .carousel-btn {
     display: flex;
@@ -35,10 +43,6 @@ export default styled.div`
       top: 50%;
 
       transform: translateY(-50%);
-
-      .chevron {
-        transform: rotate(135deg);
-      }
     }
 
     &.right {
@@ -48,20 +52,9 @@ export default styled.div`
 
       transform: translateY(-50%);
 
-      .chevron {
-        transform: rotate(-45deg);
+      img {
+        transform: rotate(180deg);
       }
-    }
-
-    /* make a chevron out of borders */
-    .chevron {
-      min-width: 10px;
-      min-height: 10px;
-
-      border-right: 1px solid
-        ${({ theme }) => transparentize(0.2, theme.ctaText)};
-      border-bottom: 1px solid
-        ${({ theme }) => transparentize(0.2, theme.ctaText)};
     }
   }
 `;
