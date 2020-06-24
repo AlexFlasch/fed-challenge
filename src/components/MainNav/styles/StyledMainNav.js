@@ -7,6 +7,7 @@ export default styled.nav`
   align-items: center;
 
   background-color: ${({ theme }) => theme.componentBg};
+  box-shadow: ${({ theme }) => theme.shadow};
 
   a.nav-item {
     padding: ${modularScale(1)} ${modularScale(3)};

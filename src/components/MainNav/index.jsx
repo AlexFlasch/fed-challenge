@@ -12,7 +12,6 @@ const MainNav = props => {
     <StyledMainNav className="main-nav" aria-label="page-navigation">
       <a href="" className="nav-item brand-logo">
         <img src={brandLogo} alt="iFit Logo" />
-        coach
       </a>
       <div className="nav-item nav-links">
         <a href="" className="nav-item">
