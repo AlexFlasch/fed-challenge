@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="11px" viewBox="0 0 6 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Interface / General / icn_cheveron_right / line</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="440" height="184" rx="4"></rect>
+        <filter x="-0.8%" y="-1.4%" width="101.6%" height="103.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.180392157   0 0 0 0 0.192156863   0 0 0 0 0.203921569  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="20" cy="20" r="20"></circle>
+        <filter x="-53.8%" y="-36.2%" width="207.5%" height="207.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.180392157   0 0 0 0 0.192156863   0 0 0 0 0.203921569  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-5" points="14.293 6.9998 9 12.2928 14.293 17.5858 14.986 16.8928 10.739 12.6468 10.386 12.2928 10.739 11.9388 14.986 7.6928"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1401.000000, -1031.000000)">
+            <g id="Media_slider" transform="translate(0.000000, 920.000000)">
+                <rect id="bg" fill="#F4F5F7" x="0" y="0" width="1440" height="232" rx="2"></rect>
+                <g id="3" transform="translate(964.000000, 24.000000)">
+                    <g id="bg">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+                <g id="controls" transform="translate(16.000000, 96.000000)">
+                    <g id="slide_right_btn" transform="translate(1368.000000, 0.000000)">
+                        <g id="Oval" opacity="0.795633">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                            <circle stroke-opacity="0.32" stroke="#F4F5F7" stroke-width="1" stroke-linejoin="square" fill="#000C28" fill-rule="evenodd" cx="20" cy="20" r="19.5"></circle>
+                        </g>
+                        <g id="Interface-/-General-/-icn_cheveron_right-/-line" transform="translate(8.000000, 8.000000)">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="mask" fill="#2E3134" fill-rule="evenodd" transform="translate(11.992890, 12.292900) rotate(-180.000000) translate(-11.992890, -12.292900) " xlink:href="#path-5"></use>
+                            <g id="Fill-/-White" mask="url(#mask-6)" fill="#FFFFFF" fill-rule="nonzero">
+                                <polygon id="ui/color/white" points="0 0 24 0 24 24 0 24"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
