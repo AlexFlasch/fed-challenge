@@ -16,6 +16,27 @@ export default styled(Card)`
     height: auto;
   }
 
+  .preview-container {
+    position: relative;
+  }
+
+  .playlist-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 35%;
+    height: 100%;
+    background-color: ${({ theme }) => theme.cardOverlay};
+    color: ${({ theme }) => theme.textWhite};
+    text-transform: uppercase;
+  }
+
   .workout-details {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -67,15 +88,26 @@ export default styled(Card)`
       border-radius: ${({ theme }) => theme.borderRadius};
     }
 
+    .workout-stats {
+      grid-column: 1 / span 5;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 5px;
+      }
+    }
+
     .workout-duration {
       font-weight: bold;
       font-size: 10px;
+
+      margin-right: 10px;
     }
 
-    .workout-plays {
+    .workout-distance {
       font-weight: bold;
       font-size: 10px;
-      grid-column: 2 / span 4;
     }
 
     .view-workout {

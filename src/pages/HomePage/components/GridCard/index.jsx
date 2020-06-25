@@ -19,11 +19,20 @@ const GridCard = props => {
       isPlaylist={props.isPlaylist}
     >
       <div className="card-grid-item">
-        <img
-          className="workout-preview"
-          src={props.workoutImg}
-          alt="workout image"
-        />
+        <div className="preview-container">
+          <img
+            className="workout-preview"
+            src={props.workoutImg}
+            alt="workout image"
+          />
+          {props.isPlaylist ? (
+            <div className="playlist-overlay">
+              <p className="num-workouts">{props.numWorkouts}</p>
+              <p>workouts</p>
+              {/* playlist icon */}
+            </div>
+          ) : null}
+        </div>
         <div className="workout-details">
           <span className="workout-title">{props.workoutTitle}</span>
           <img
@@ -31,13 +40,21 @@ const GridCard = props => {
             src={props.instructorImg}
             alt="instructor portrait"
           />
-          <div className="workout-duration">
-            {/* stopwatch icon here */}
-            <span>{props.workoutDuration}</span>
-          </div>
-          <div className="workout-plays">
-            {/* track icon here */}
-            <span>{props.workoutPlays}</span>
+          <div className="workout-stats">
+            <div className="workout-duration">
+              <img
+                src={process.env.PUBLIC_URL + '/assets/svgs/stopwatch.svg'}
+                alt="stopwatch"
+              />
+              <span>{props.workoutDuration}</span>
+            </div>
+            <div className="workout-distance">
+              <img
+                src={process.env.PUBLIC_URL + '/assets/svgs/track.svg'}
+                alt="distance"
+              />
+              <span>{props.workoutPlays}</span>
+            </div>
           </div>
           <motion.a variants={detailsVariants} href="" className="view-workout">
             View Details
