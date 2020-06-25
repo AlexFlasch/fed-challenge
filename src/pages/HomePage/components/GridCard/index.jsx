@@ -17,6 +17,7 @@ const GridCard = props => {
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       isPlaylist={props.isPlaylist}
+      previewImg={props.workoutImg}
     >
       <div className="card-grid-item">
         <div className="preview-container">
@@ -28,8 +29,11 @@ const GridCard = props => {
           {props.isPlaylist ? (
             <div className="playlist-overlay">
               <p className="num-workouts">{props.numWorkouts}</p>
-              <p>workouts</p>
-              {/* playlist icon */}
+              <p className="workout">workouts</p>
+              <img
+                src={process.env.PUBLIC_URL + '/assets/svgs/playlist.svg'}
+                alt="playlist"
+              />
             </div>
           ) : null}
         </div>
@@ -40,22 +44,24 @@ const GridCard = props => {
             src={props.instructorImg}
             alt="instructor portrait"
           />
-          <div className="workout-stats">
-            <div className="workout-duration">
-              <img
-                src={process.env.PUBLIC_URL + '/assets/svgs/stopwatch.svg'}
-                alt="stopwatch"
-              />
-              <span>{props.workoutDuration}</span>
+          {props.isPlaylist ? null : (
+            <div className="workout-stats">
+              <div className="workout-duration">
+                <img
+                  src={process.env.PUBLIC_URL + '/assets/svgs/stopwatch.svg'}
+                  alt="stopwatch"
+                />
+                <span>{props.workoutDuration}</span>
+              </div>
+              <div className="workout-distance">
+                <img
+                  src={process.env.PUBLIC_URL + '/assets/svgs/track.svg'}
+                  alt="distance"
+                />
+                <span>{props.workoutPlays}</span>
+              </div>
             </div>
-            <div className="workout-distance">
-              <img
-                src={process.env.PUBLIC_URL + '/assets/svgs/track.svg'}
-                alt="distance"
-              />
-              <span>{props.workoutPlays}</span>
-            </div>
-          </div>
+          )}
           <motion.a variants={detailsVariants} href="" className="view-workout">
             View Details
           </motion.a>

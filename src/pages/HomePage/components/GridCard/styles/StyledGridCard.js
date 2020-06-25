@@ -12,12 +12,17 @@ export default styled(Card)`
   }
 
   .workout-preview {
+    visibility: hidden;
     width: 100%;
     height: auto;
   }
 
   .preview-container {
     position: relative;
+
+    background-image: url(${props =>
+      process.env.PUBLIC_URL + props.previewImg});
+    background-size: cover;
   }
 
   .playlist-overlay {
@@ -30,11 +35,27 @@ export default styled(Card)`
     justify-content: center;
     align-items: center;
 
-    width: 35%;
+    width: 40%;
     height: 100%;
     background-color: ${({ theme }) => theme.cardOverlay};
     color: ${({ theme }) => theme.textWhite};
     text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    line-height: 12px;
+
+    .num-workouts {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+      line-height: 30px;
+    }
+
+    .workout {
+      margin: 0;
+      padding: 5px;
+      font-size: 10px;
+    }
   }
 
   .workout-details {
