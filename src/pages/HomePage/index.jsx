@@ -48,6 +48,8 @@ const HomePage = props => {
         instructorImg={data.instructorImg}
         workoutDuration={data.workoutDuration}
         workoutPlays={data.workoutPlays}
+        isPlaylist={data.isPlaylist}
+        numWorkouts={data.numWorkouts}
       />
     ));
 

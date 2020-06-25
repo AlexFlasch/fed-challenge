@@ -1,29 +1,26 @@
 import styled from 'styled-components';
 
 export default styled.section`
-  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
 
-  nav {
+  padding: 0 40px;
+
+  .language-dropdown {
+    justify-self: start;
+  }
+
+  .legal-info {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 48px 20vw 24px 20vw;
-  }
+    justify-content: center;
+    align-items: center;
 
-  .page-list-title {
-    font-weight: bold;
-  }
-
-  .page-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin: 1em 0;
+    & > * {
+      margin: 0 10px;
     }
 
     a {
+      font-size: 14px;
       color: ${({ theme }) => theme.textWhite};
       text-decoration: none;
 

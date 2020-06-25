@@ -18,4 +18,5 @@ export default {
   carouselBtnBorder: '1px solid rgba(244, 245, 247, 0.32)',
   cardOverlay: 'rgba(0, 12, 40, 0.54)',
   footerBg: '#2e3134',
+  socialGradient: 'linear-gradient(to bottom right, #0069d2 0%, #28e1a5 100%)',
 };

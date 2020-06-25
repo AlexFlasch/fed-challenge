@@ -7,19 +7,44 @@ const SocialSection = props => {
   return (
     <StyledSocialSection>
       <a href="">
-        <img src="" alt="Youtube Logo" />
+        <div className="img-mask">
+          <img
+            src={process.env.PUBLIC_URL + '/assets/svgs/youtube.svg'}
+            alt="Youtube Logo"
+          />
+        </div>
       </a>
       <a href="">
-        <img src="" alt="Pinterest Logo" />
+        <div className="img-mask">
+          <img
+            src={process.env.PUBLIC_URL + '/assets/svgs/pinterest.svg'}
+            alt="Pinterest Logo"
+          />
+        </div>
       </a>
       <a href="">
-        <img src="" alt="Facebook Logo" />
+        <div className="img-mask">
+          <img
+            src={process.env.PUBLIC_URL + '/assets/svgs/facebook.svg'}
+            alt="Facebook Logo"
+          />
+        </div>
       </a>
       <a href="">
-        <img src="" alt="Twitter Logo" />
+        <div className="img-mask">
+          <img
+            src={process.env.PUBLIC_URL + '/assets/svgs/twitter.svg'}
+            alt="Twitter Logo"
+          />
+        </div>
       </a>
       <a href="">
-        <img src="" alt="Instagram Logo" />
+        <div className="img-mask">
+          <img
+            src={process.env.PUBLIC_URL + '/assets/svgs/instagram.svg'}
+            alt="Instagram Logo"
+          />
+        </div>
       </a>
     </StyledSocialSection>
   );

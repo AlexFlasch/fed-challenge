@@ -16,6 +16,7 @@ const GridCard = props => {
       animate={isHovered ? 'hovered' : 'initial'}
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      isPlaylist={props.isPlaylist}
     >
       <div className="card-grid-item">
         <img
@@ -53,6 +54,8 @@ GridCard.propTypes = {
   instructorImg: PropTypes.string,
   workoutDuration: PropTypes.string,
   workoutPlays: PropTypes.string,
+  isPlaylist: PropTypes.bool,
+  numWorkouts: PropTypes.number,
 };
 
 GridCard.defaultProps = {};
