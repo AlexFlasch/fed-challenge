@@ -14,7 +14,7 @@ export default styled.figure`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${props => props.heroImg});
+  background-image: url('${process.env.PUBLIC_URL}/assets/images/hero.png');
   background-color: rgba(0, 0, 0, 0.33);
   background-blend-mode: multiply;
   background-position: top;

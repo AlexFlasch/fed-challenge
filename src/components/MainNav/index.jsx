@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import brandLogo from '../../assets/svgs/brand-logo.svg';
-
 import Button from '../Button';
 
 import StyledMainNav from './styles/StyledMainNav';
@@ -11,7 +9,10 @@ const MainNav = props => {
   return (
     <StyledMainNav className="main-nav" aria-label="page-navigation">
       <a href="" className="nav-item brand-logo">
-        <img src={brandLogo} alt="iFit Logo" />
+        <img
+          src={process.env.PUBLIC_URL + '/assets/svgs/brand-logo.svg'}
+          alt="iFit Logo"
+        />
       </a>
       <div className="nav-item nav-links">
         <a href="" className="nav-item">

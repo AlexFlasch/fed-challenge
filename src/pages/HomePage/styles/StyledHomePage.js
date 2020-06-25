@@ -1,20 +1,28 @@
 import styled from 'styled-components';
+import { modularScale } from 'polished';
 
 export default styled.div`
-  .carousel-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  .workout-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
 
-    height: 100%;
-    width: 100%;
+    padding: ${modularScale(5)} ${modularScale(7)};
+  }
 
-    color: ${({ theme }) => theme.textDark};
-    opacity: 0.8;
+  .equipment-section .section-title {
+    text-align: center;
+    font-weight: normal;
+  }
 
-    span {
-      text-align: center;
-    }
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: 20vw;
+    gap: 24px;
+    justify-content: center;
+
+    padding: 24px;
   }
 `;

@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import heroImg from '../../assets/images/hero.png';
-
 import Button from '../Button';
 
 import StyledHero from './styles/StyledHero';
 
 const Hero = props => {
   return (
-    <StyledHero heroImg={heroImg}>
+    <StyledHero>
       <h1 className="hero-text">
         The best personal training,
         <br />

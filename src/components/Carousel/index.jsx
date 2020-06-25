@@ -1,20 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
-import chevron from '../../assets/svgs/chevron.svg';
 
 import StyledCarousel from './styles/StyledCarousel';
 
 const Carousel = props => {
+  // TODO: animate the items in the carousel when they shift position
+
+  const [items, setItems] = useState(React.Children.toArray(props.children));
+
+  const shiftLeft = () => {
+    const itemToLoop = items.splice(0, 1);
+
+    setItems([...items, itemToLoop]);
+  };
+
+  const shiftRight = () => {
+    const itemToLoop = items.pop();
+
+    setItems([itemToLoop, ...items]);
+  };
+
   return (
     <StyledCarousel>
-      <button className="carousel-btn left">
-        <img src={chevron} alt="previous-item" />
+      <div className="carousel-contents">{items}</div>
+      <button className="carousel-btn left" onClick={shiftLeft}>
+        <img
+          src={process.env.PUBLIC_URL + '/assets/svgs/chevron.svg'}
+          alt="previous-item"
+        />
       </button>
-      <button className="carousel-btn right">
-        <img src={chevron} alt="next-item" />
+      <button className="carousel-btn right" onClick={shiftRight}>
+        <img
+          src={process.env.PUBLIC_URL + '/assets/svgs/chevron.svg'}
+          alt="next-item"
+        />
       </button>
-      <div className="carousel-contents">{props.children}</div>
     </StyledCarousel>
   );
 };

@@ -2,64 +2,78 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { modularScale } from 'polished';
 
+// import data
+import reviewCardData from '../../data/review-cards';
+import gridCardData from '../../data/grid-cards';
+import equipmentCardData from '../../data/equipment-cards';
+
+// components
 import ProductNav from '../../components/ProductNav';
 import MainNav from '../../components/MainNav';
 import Hero from '../../components/Hero';
 import Carousel from '../../components/Carousel';
-import Card from '../../components/Card';
+import ReviewCard from './components/ReviewCard';
+import GridCard from './components/GridCard';
+import Footer from '../../components/Footer';
 
+// styled components
 import StyledHomePage from './styles/StyledHomePage';
+import EquipmentCard from './components/EquipmentCard';
 
 const HomePage = props => {
+  const generateReviewCards = () => {
+    const carouselCardProps = {
+      transition: {
+        ease: 'easeInOut',
+        duration: 0.333,
+      },
+    };
+
+    return reviewCardData.map((data, i) => (
+      <ReviewCard
+        {...carouselCardProps}
+        key={`review-card-${i}`}
+        brandImg={data.brandImg}
+        reviewText={data.reviewText}
+      />
+    ));
+  };
+
+  const generateGridCards = () =>
+    gridCardData.map((data, i) => (
+      <GridCard
+        key={`grid-card-${i}`}
+        workoutImg={data.workoutImg}
+        workoutTitle={data.workoutTitle}
+        instructorImg={data.instructorImg}
+        workoutDuration={data.workoutDuration}
+        workoutPlays={data.workoutPlays}
+      />
+    ));
+
+  const generateEquipmentCards = () =>
+    equipmentCardData.map((data, i) => (
+      <EquipmentCard
+        key={`equipment-card-${i}`}
+        equipmentImg={data.equipmentImg}
+        equipmentName={data.equipmentName}
+      />
+    ));
+
   return (
     <StyledHomePage>
       <ProductNav />
       <MainNav />
       <Hero />
-      <Carousel>
-        <Card
-          width="30vw"
-          height={modularScale(8.75)}
-          margin="24px 12px"
-          padding="48px 40px"
-          positionTransition
-        >
-          <div className="carousel-card">
-            {/* logos here soon */}
-            <span>
-              "You focus on putting in the work, and the technology handles the
-              rest."
-            </span>
-          </div>
-        </Card>
-        <Card
-          width="30vw"
-          height={modularScale(8.75)}
-          margin="24px 12px"
-          padding="48px 40px"
-          positionTransition
-        >
-          <div className="carousel-card">
-            {/* logos here soon */}
-            <span>
-              "Literally transports you from home to wherever you shoose to
-              run."
-            </span>
-          </div>
-        </Card>
-        <Card
-          width="30vw"
-          height={modularScale(8.75)}
-          margin="24px 12px"
-          padding="48px 40px"
-          positionTransition
-        >
-          <div className="carousel-card">
-            {/* logos here soon */}
-            <span>"Breathes new life into a tired, old running routine."</span>
-          </div>
-        </Card>
-      </Carousel>
+      <Carousel>{generateReviewCards()}</Carousel>
+      <section className="workout-grid">{generateGridCards()}</section>
+      <section className="equipment-section">
+        <h2 className="section-title">
+          Interested in our exciting iFit-enabled equipment?
+        </h2>
+        <div className="equipment-grid">{generateEquipmentCards()}</div>
+      </section>
+      <Footer />
     </StyledHomePage>
   );
 };
