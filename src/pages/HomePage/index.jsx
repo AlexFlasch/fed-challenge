@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { modularScale } from 'polished';
 
 // import data
 import reviewCardData from '../../data/review-cards';
@@ -8,8 +7,7 @@ import gridCardData from '../../data/grid-cards';
 import equipmentCardData from '../../data/equipment-cards';
 
 // components
-import ProductNav from '../../components/ProductNav';
-import MainNav from '../../components/MainNav';
+import TopNav from '../../components/TopNav';
 import Hero from '../../components/Hero';
 import Carousel from '../../components/Carousel';
 import ReviewCard from './components/ReviewCard';
@@ -64,8 +62,7 @@ const HomePage = props => {
 
   return (
     <StyledHomePage>
-      <ProductNav />
-      <MainNav />
+      <TopNav />
       <Hero />
       <Carousel>{generateReviewCards()}</Carousel>
       <section className="workout-grid">{generateGridCards()}</section>

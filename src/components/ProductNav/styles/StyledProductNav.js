@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { modularScale } from 'polished';
 
 export default styled.nav`
   display: flex;
@@ -12,7 +11,7 @@ export default styled.nav`
     justify-content: center;
     align-items: center;
 
-    padding: ${modularScale(1)} ${modularScale(3)};
+    padding: 1.333rem 2.5rem;
     border-right: 1px solid ${({ theme }) => theme.borderDark};
 
     text-transform: uppercase;

@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  body {
+  html,body {
+    width: 100vw;
     margin: 0;
     padding: 0;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -12,6 +13,10 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: ${({ theme }) => theme.pageBg};
     color: ${({ theme }) => theme.text};
+  }
+
+  #root {
+    width: 100%;
   }
 
   * {

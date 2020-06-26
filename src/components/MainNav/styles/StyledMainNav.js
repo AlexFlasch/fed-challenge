@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { modularScale } from 'polished';
 
 export default styled.nav`
   display: flex;
@@ -10,7 +9,7 @@ export default styled.nav`
   box-shadow: ${({ theme }) => theme.shadow};
 
   a.nav-item {
-    padding: ${modularScale(1)} ${modularScale(3)};
+    padding: 1.333rem 2.5rem;
 
     text-transform: uppercase;
     text-decoration: none;
@@ -18,9 +17,5 @@ export default styled.nav`
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 14px;
-  }
-
-  a.nav-item.brand-logo {
-    font-size: 19px;
   }
 `;

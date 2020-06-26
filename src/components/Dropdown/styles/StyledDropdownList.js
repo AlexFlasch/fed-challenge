@@ -18,6 +18,8 @@ export default styled.div`
   border-radius: ${({ theme }) =>
     `${theme.borderRadius} ${theme.borderRadius} 0 0`};
 
+  z-index: 2;
+
   .list-container {
     display: flex;
     flex-direction: column-reverse;

@@ -19,4 +19,6 @@ export default {
   cardOverlay: 'rgba(0, 12, 40, 0.54)',
   footerBg: '#2e3134',
   socialGradient: 'linear-gradient(to bottom right, #0069d2 0%, #28e1a5 100%)',
+  mobileBreakpoint: '@media (max-width: 768px)',
+  mobileBreakpointNoUnit: 768,
 };

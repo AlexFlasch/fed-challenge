@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import { modularScale } from 'polished';
 
 export default styled.div`
+  width: 100vw;
+
   .workout-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 24px;
 
-    padding: ${modularScale(5)} ${modularScale(7)};
+    padding: 4rem 7.5rem;
   }
 
   .equipment-section .section-title {
@@ -24,5 +25,21 @@ export default styled.div`
     justify-content: center;
 
     padding: 24px;
+  }
+
+  ${({ theme }) => theme.mobileBreakpoint} {
+    .workout-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 12px;
+
+      padding: 4rem 2.5rem;
+    }
+
+    .equipment-grid {
+      grid-template-columns: repeat(2, 33vw);
+      grid-template-rows: repeat(2, 33vw);
+      gap: 12px;
+    }
   }
 `;

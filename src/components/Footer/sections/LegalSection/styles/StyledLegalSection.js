@@ -30,4 +30,13 @@ export default styled.section`
       }
     }
   }
+
+  ${({ theme }) => theme.mobileBreakpoint} {
+    .legal-info {
+      grid-column: 2 / span 2;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      word-wrap: nowrap;
+    }
+  }
 `;

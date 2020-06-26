@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { modularScale } from 'polished';
 
 import StyledButton from '../../Button/styles/StyledButton';
 
@@ -22,14 +21,20 @@ export default styled.figure`
   background-size: 100%;
 
   .hero-text {
-    font-size: ${modularScale(5)};
+    font-size: 4rem;
     text-align: center;
     font-weight: bold;
     color: ${({ theme }) => theme.ctaText};
   }
 
   ${StyledButton} {
-    padding: ${modularScale(1)} ${modularScale(7.5)};
+    padding: 1.333rem 8.5rem;
     font-weight: normal;
+  }
+
+  ${({ theme }) => theme.mobileBreakpoint} {
+    .hero-text {
+      font-size: 2rem;
+    }
   }
 `;

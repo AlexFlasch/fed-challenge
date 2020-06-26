@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { modularScale, transparentize } from 'polished';
 
 export default styled.section`
   position: relative;
@@ -8,7 +7,7 @@ export default styled.section`
   justify-content: center;
   align-items: center;
 
-  min-height: ${modularScale(10)};
+  min-height: 15rem;
 
   background-color: ${({ theme }) => theme.carouselBg};
 
